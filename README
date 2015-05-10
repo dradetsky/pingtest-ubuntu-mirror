@@ -1,6 +1,6 @@
 Find your fastest mirror. Usage:
 
-./pingtest.sh [number]
+./pingtest.sh [number-of-pings]
 
 Pingtest all the ubuntu mirrors, determine the fastest one.
 
