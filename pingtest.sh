@@ -57,3 +57,4 @@ calc | sort -nr
 best=$(calc | sort -n | head -n 1 | sed 's/.*\///')
 echo $best
 grep $best mirrors.txt
+grep $best mirrors.txt > last-best-mirror.txt
