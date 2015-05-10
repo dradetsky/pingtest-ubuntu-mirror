@@ -12,7 +12,15 @@ outdir=.pingout_$pingcount
 
 get_mirrors() {
     if [ ! -f mirrors.txt ]; then
-        echo "wget http://mirrors.ubuntu.com/mirrors.txt"
+        wget http://mirrors.ubuntu.com/mirrors.txt
+    else
+        echo 'found mirrors.txt'
+    fi
+
+    # should have now, otherwise can't go on
+    if [ ! -f mirrors.txt ]; then
+        echo 'failed to get mirrors.txt'
+        exit
     fi
 }
 
@@ -43,6 +51,7 @@ calc() {
     done
 }
 
+get_mirrors
 do_pings
 calc | sort -nr
 best=$(calc | sort -n | head -n 1 | sed 's/.*\///')
