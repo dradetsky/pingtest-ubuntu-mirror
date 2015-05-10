@@ -8,7 +8,7 @@ if [ $# -ne 0 ]; then
 fi
 echo 'pingcount' $pingcount
 
-outdir=.calcout_$pingcount
+outdir=.pingout_$pingcount
 
 get_mirrors() {
     if [ ! -f mirrors.txt ]; then
