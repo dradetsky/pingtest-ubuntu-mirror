@@ -2,7 +2,7 @@
 
 pingint=0.2
 
-pingcount=4
+pingcount=10
 if [ $# -ne 0 ]; then
     pingcount=$1
 fi
