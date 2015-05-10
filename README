@@ -1,0 +1,9 @@
+Find your fastest mirror. Usage:
+
+./pingtest.sh [number]
+
+Pingtest all the ubuntu mirrors, determine the fastest one.
+
+One day I realized my mirror was slow, and I couldn't find an easy way
+to find the fastest mirror, so I wrote a script to do it. Might be
+better to time wget-ing a small .deb, but this is good enough.
